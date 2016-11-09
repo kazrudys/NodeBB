@@ -17,10 +17,10 @@
 	along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+require('newrelic');
+
 "use strict";
 /*global require, global, process*/
-
-require('newrelic');
 
 var nconf = require('nconf');
 nconf.argv().env();
