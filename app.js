@@ -20,6 +20,8 @@
 "use strict";
 /*global require, global, process*/
 
+require('newrelic');
+
 var nconf = require('nconf');
 nconf.argv().env();
 
