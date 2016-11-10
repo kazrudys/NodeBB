@@ -17,12 +17,6 @@
 	along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-var fs = require('fs');
-
-if (fs.existsSync('/app/nodebb/newrelic.js')) {
-    require('newrelic');
-}
-
 "use strict";
 /*global require, global, process*/
 
@@ -38,6 +32,9 @@ var fs = require('fs'),
 	pkg = require('./package.json'),
 	utils = require('./public/src/utils.js');
 
+if (fs.existsSync('/app/nodebb/newrelic.js')) {
+    require('newrelic');
+}
 
 global.env = process.env.NODE_ENV || 'production';
 
