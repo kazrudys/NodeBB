@@ -17,7 +17,11 @@
 	along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-require('newrelic');
+var fs = require('fs');
+
+if (fs.existsSync('/app/nodebb/newrelic.js')) {
+    require('newrelic');
+}
 
 "use strict";
 /*global require, global, process*/
